@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+x=[-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,]
+y1=[i**2 for i in x]
+y2=[-i**2+100 for i in x]
+plt.figure(figsize=(8,8))
+plt.plot(x,y1,
+        label='y1=x^2',
+        color='r',
+        linewidth=2)
+plt.plot(x,y2,'bx',
+        label='y2=-x^2+100')
+
+plt.minorticks_on()
+plt.grid(which='major',
+        color='k',
+        linewidth=1)
+plt.grid(which='minor',
+       color='k',
+       linestyle=':')
+plt.title("y1=x^2, y2=-x^2+100",fontsize=20)
+plt.xlabel("x",fontsize=15)
+plt.ylabel("y1,y2",fontsize=15)
+plt.legend()
+plt.tick_params(which='major', length=10, width=1)
+plt.tick_params(which='minor', length=5, width=0.5)
+plt.show()
